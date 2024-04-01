@@ -20,7 +20,7 @@ def busca_em_largura(grafo, no_inicial, objetivo):
 
 #================ Execução ============================================
 
-if __name__ == "__main__":
+if __name__ == "__main__":  #Para que o código dentro dele só seja executado se o arquivo for executado diretamente
     mapa_romenia = grafo.mapa_romenia()
     no_inicial = 'Arad'
     objetivo = 'Bucharest'
