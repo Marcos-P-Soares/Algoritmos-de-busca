@@ -5,17 +5,17 @@ import grafo
 def busca_em_largura(grafo, no_inicial, objetivo):
 
     queue = deque([(no_inicial, [no_inicial])])
-    visited = set()
+    visitados = set()
 
     while queue:
-        node, path = queue.popleft()
-        if node == objetivo:
-            return path
-        if node not in visited:
-            visited.add(node)
-            for neighbor in grafo.neighbors(node):
-                if neighbor not in visited:
-                    queue.append((neighbor, path + [neighbor]))
+        no, caminho = queue.popleft()
+        if no == objetivo:
+            return caminho
+        if no not in visitados:
+            visitados.add(no)
+            for neighbor in grafo.neighbors(no):
+                if neighbor not in visitados:
+                    queue.append((neighbor, caminho + [neighbor]))
     return "Caminho não encontrado"
 
 #================ Execução ============================================
@@ -24,6 +24,6 @@ if __name__ == "__main__":  #Para que o código dentro dele só seja executado s
     mapa_romenia = grafo.mapa_romenia()
     no_inicial = 'Arad'
     objetivo = 'Bucharest'
-    path = busca_em_largura(mapa_romenia, no_inicial, objetivo)
-    print("Caminho encontrado:", path)
+    caminho = busca_em_largura(mapa_romenia, no_inicial, objetivo)
+    print("Caminho encontrado:", caminho)
     
