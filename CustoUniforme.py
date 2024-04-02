@@ -16,7 +16,7 @@ def busca_uniforme(grafo, no_inicial, objetivo):
             for neighbor in grafo.neighbors(no):
                 if neighbor not in visitados:
                     custo_vizinho = grafo[no][neighbor]['custo']
-                    heapq.heappush(queue, (custo + custo_vizinho, neighbor, caminho + [neighbor]))  #Adiciona um item ao heap.
+                    heapq.heappush(queue, (custo + custo_vizinho, neighbor, caminho + [neighbor]))  #Verifica a prioridade de custo de um no e organiza a fila
     return "Caminho não encontrado"
 
 #================ Execução ============================================
