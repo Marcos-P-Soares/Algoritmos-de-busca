@@ -5,26 +5,26 @@ def mapa_romenia():
     mapa = nx.Graph()
 
     mapa.add_nodes_from([
-        ('Arad'),
-        ('Zerind'),
-        ('Oradea'),
-        ('Sibiu'),
-        ('Timisoara'),
-        ('Lugoj'),
-        ('Mehadia'),
-        ('Drobeta'),
-        ('Craiova'),
-        ('Rimnicu'),
-        ('Fagaras'),
-        ('Pitesti'),
-        ('Bucharest'),
-        ('Giurgiu'),
-        ('Urziceni'),
-        ('Hirsova'),
-        ('Eforie'),
-        ('Vaslui'),
-        ('Iasi'),
-        ('Neamt')
+        ('Arad',{'heuristica':366}),
+        ('Zerind',{'heuristica':374}),
+        ('Oradea',{'heuristica':380}),
+        ('Sibiu',{'heuristica':253 }),
+        ('Timisoara',{'heuristica':329}),
+        ('Lugoj',{'heuristica':244}),
+        ('Mehadia',{'heuristica':241}),
+        ('Drobeta',{'heuristica':242}),
+        ('Craiova',{'heuristica':160}),
+        ('Rimnicu',{'heuristica':193}),
+        ('Fagaras',{'heuristica':176}),
+        ('Pitesti',{'heuristica':100}),
+        ('Bucharest',{'heuristica':0}),
+        ('Giurgiu',{'heuristica':77}),
+        ('Urziceni',{'heuristica':80}),
+        ('Hirsova',{'heuristica':151}),
+        ('Eforie',{'heuristica':161}),
+        ('Vaslui',{'heuristica':199}),
+        ('Iasi',{'heuristica':226}),
+        ('Neamt',{'heuristica':234})
         ])
 
     mapa.add_edges_from([
@@ -53,6 +53,9 @@ def mapa_romenia():
     ])
 
     return mapa
+
+
+
 # pos = nx.random_layout(mapa)
 
 # edge_labels = {(u,v):d['custo'] for u,v,d in mapa.edges(data=True)}
