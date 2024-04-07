@@ -7,7 +7,6 @@ def busca_em_profundidade_iterativa(grafo, no_inicial, objetivo):
         if resultado != "Caminho não encontrado":
             return resultado
         limite_profundidade += 1
-        print(limite_profundidade)
 
 def busca_em_profundidade_limitada(grafo, no_inicial, objetivo, limite_profundidade):
     stack = [(no_inicial, [no_inicial])]
