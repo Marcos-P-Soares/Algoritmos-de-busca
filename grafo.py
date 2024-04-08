@@ -40,6 +40,7 @@ def mapa_romenia():
         ('Mehadia','Drobeta',{'custo':75}),
         ('Drobeta','Craiova',{'custo':120}),
         ('Rimnicu','Craiova',{'custo':146}),
+        ('Pitesti','Craiova',{'custo':138}),
         ('Rimnicu','Pitesti',{'custo':97}),
         ('Fagaras','Bucharest',{'custo':211}),
         ('Pitesti','Bucharest',{'custo':101}),
